@@ -7,7 +7,8 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				rubik: "'Rubik', sans-serif"
+				poppins: ['Poppins', 'sans-serif'],
+				rubik: ['Rubik', 'sans-serif']
 			},
 			backgroundImage: {
 				main: 'url(/src/assets/Images/main-bg.png)'
