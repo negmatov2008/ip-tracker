@@ -3,13 +3,13 @@ import 'leaflet/dist/leaflet.css'
 
 const Map = () => {
 	return (
-		<div className='pt-32'>
-			<MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={true} >
+		<div className='pt-20'>
+			<MapContainer center={[33.258, -111.876]} zoom={10} scrollWheelZoom={true} >
 				<TileLayer
 					attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 				/>
-				<Marker position={[51.505, -0.09]}>
+				<Marker position={[33.258, -111.876]}>
 					<Popup>
 						A pretty CSS3 popup. <br /> Easily customizable.
 					</Popup>
