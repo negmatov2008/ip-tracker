@@ -1,24 +1,20 @@
-import { Center, InputGroup, Input, IconButton } from '@chakra-ui/react'
 import { RiArrowRightSLine } from 'react-icons/ri'
 
 const SearchInput = () => {
 	return (
-		<Center>
-			<InputGroup size='lg' width='35rem' pt='2rem'>
-				<Input
-					placeholder='Search for any IP address or domain'
-					background='white'
-					mr='-10px'
-				/>
-				<IconButton
-					aria-label='Look up IP address'
-					backgroundColor='black'
-					icon={<RiArrowRightSLine size={23}/>}
-					color='white'
-					width='9%'
-				></IconButton>
-			</InputGroup>
-		</Center>
+		<form className='flex items-center justify-center mt-10'>
+			<input
+				type="text"
+				placeholder='Search for any IP address or domain'
+				className='rounded-l-lg py-3 px-2 w-[30rem]'
+			/>
+			<button
+				type='submit'
+				className='bg-black rounded-r-lg py-4 px-4 color-white'
+			>
+				<RiArrowRightSLine color='white' />
+			</button>
+		</form>
 	)
 }
 

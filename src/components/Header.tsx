@@ -1,10 +1,8 @@
-import { Heading } from '@chakra-ui/react'
-
 const Header = () => {
 	return (
-		<Heading className='font-rubik text-white text-center pt-10'>
+		<h1 className='font-rubik text-white text-center text-4xl pt-10'>
 			IP Address Tracker
-		</Heading>
+		</h1>
 	)
 }
 
