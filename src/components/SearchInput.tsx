@@ -1,19 +1,22 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { RiArrowRightSLine } from 'react-icons/ri'
 
-const SearchInput = ({ handleIpSearch, ipInfo }: any) => {
-	const [ip, setIp] = useState('')
+interface Props {
+	ipAddress: string;
+	onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
 
+const SearchInput = ({ ipAddress, onChange }: Props) => {
 	return (
 		<form
-			onSubmit={handleIpSearch}
+			// onSubmit={someFunc}
 			className='flex items-center justify-center mt-6 mx-8 md:mt-10'
 		>
 			<input
 				type="text"
 				placeholder='Search for any IP address'
-				onChange={e => setIp(e.target.value)}
-				value={ip}
+				onChange={onChange}
+				value={ipAddress}
 				className='font-rubik rounded-l-xl py-3 px-2 w-[30rem]'
 			/>
 			<button

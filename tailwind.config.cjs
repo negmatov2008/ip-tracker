@@ -11,7 +11,7 @@ module.exports = {
 				rubik: ['Rubik', 'sans-serif']
 			},
 			backgroundImage: {
-				main: 'url(/src/images/background.png)'
+				main: 'url(/src/assets/background.png)'
 			}
 		}
 	},
