@@ -6,6 +6,7 @@ import Card from './components/Card/Card'
 import Map from './components/Map'
 
 const App = () => {
+	const [loading, setLoading] = useState(true)
 	const [ipAddress, setIpAddress] = useState('')
 	const [ipData, setIpData] = useState({
 		ip: '',
@@ -20,6 +21,7 @@ const App = () => {
 	}, [])
 
 	const fetchIpOnLoad = async () => {
+		setLoading(true)
 		const response = await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=804f428c84f344a6840d8db7410cbc7d')
 		const data = await response.json()
 		setIpData({
@@ -29,21 +31,25 @@ const App = () => {
 			timezone: data.time_zone.offset,
 			geolocation: [Number(data.latitude), Number(data.longitude)]
 		})
-		setIpAddress(data.ip)
+		setLoading(false)
 	}
 
 	const fetchIpOnRequest = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault()
-		const response = await fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=804f428c84f344a6840d8db7410cbc7d&ip=${ipAddress}`)
-		const data = await response.json()
-		setIpData({
-			ip: data.ip,
-			isp: data.isp,
-			location: `${data.city}, ${data.state_prov}`,
-			timezone: data.time_zone.offset,
-			geolocation: [Number(data.latitude), Number(data.longitude)]
-		})
-		setIpAddress(data.ip)
+		setLoading(true)
+		if (ipAddress && ipAddress !== ipData.ip) {
+			const response = await fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=804f428c84f344a6840d8db7410cbc7d&ip=${ipAddress}`)
+			const data = await response.json()
+			setIpData({
+				ip: data.ip,
+				isp: data.isp,
+				location: `${data.city}, ${data.state_prov}`,
+				timezone: data.time_zone.offset,
+				geolocation: [Number(data.latitude), Number(data.longitude)]
+			})
+			setIpAddress(data.ip)
+			setLoading(false)
+		}
 	}
 
 	const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -54,7 +60,7 @@ const App = () => {
 		<div className='h-[35vh] bg-center bg-main bg-no-repeat bg-cover'>
 			<Header />
 			<SearchInput ipAddress={ipAddress} onChange={handleInputChange} onSubmit={fetchIpOnRequest} />
-			<Card ipData={ipData} />
+			<Card ipData={ipData} loading={loading} />
 			<Map ipLocation={ipData.geolocation} />
 		</div>
 	)

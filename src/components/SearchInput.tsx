@@ -18,7 +18,7 @@ const SearchInput = ({ ipAddress, onChange, onSubmit }: Props) => {
 				placeholder='Search for any IP address'
 				onChange={onChange}
 				value={ipAddress}
-				className='font-rubik rounded-l-xl py-3 px-2 w-[30rem]'
+				className='font-rubik rounded-l-xl py-3 px-2 w-[30rem] focus:outline-none'
 			/>
 			<button
 				type='submit'
