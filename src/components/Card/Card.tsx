@@ -18,10 +18,38 @@ const Card = ({ ipData, loading }: Props) => {
 			{loading
 				? (
 					<>
-						<CardInfo header={'IP Address'} value={<ClipLoader color='#000000' />} />
-						<CardInfo header={'Location'} value={<ClipLoader color='#000000' />} />
-						<CardInfo header={'Timezone'} value={<ClipLoader color='#000000' />} />
-						<CardInfo header={'ISP'} value={<ClipLoader color='#000000' />} />
+						<CardInfo
+							header={'IP Address'}
+							value={
+								<div className='flex justify-center w-full pt-2'>
+									<ClipLoader color='#000000' />
+								</div>
+							}
+						/>
+						<CardInfo
+							header={'Location'}
+							value={
+								<div className='flex justify-center w-full pt-2'>
+									<ClipLoader color='#000000' />
+								</div>
+							}
+						/>
+						<CardInfo
+							header={'Timezone'}
+							value={
+								<div className='flex justify-center w-full pt-2'>
+									<ClipLoader color='#000000' />
+								</div>
+							}
+						/>
+						<CardInfo
+							header={'ISP'}
+							value={
+								<div className='flex justify-center w-full pt-2'>
+									<ClipLoader color='#000000' />
+								</div>
+							}
+						/>
 					</>
 				)
 				: (
