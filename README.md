@@ -1,6 +1,6 @@
 # IP Address Tracker
 
-![App Homepage](https://www.github.com/Harris-Ryan/IP-tracker/blob/src/assets/ip-tracker-homepage.png?raw=true)
+![App Homepage](https://github.com/Harris-Ryan/IP-tracker/blob/src/assets/ip-tracker-homepage.png?raw=true)
 
 ## Overview
 
