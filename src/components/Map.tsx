@@ -1,19 +1,31 @@
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
-const Map = () => {
+interface Props {
+	ipLocation: [number, number] | any;
+}
+
+const ChangeMapView = ({ coords }: any) => {
+	const map = useMap()
+	map.setView(coords, map.getZoom())
+
+	return null
+}
+
+const Map = ({ ipLocation }: Props) => {
 	return (
 		<div className='pt-20'>
-			<MapContainer center={[33.44825, -112.07580]} zoom={10} scrollWheelZoom={true}>
+			<MapContainer center={ipLocation} zoom={10} scrollWheelZoom={true}>
 				<TileLayer
 					attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 				/>
-				<Marker position={[33.44825, -112.07580]}>
+				<Marker position={ipLocation}>
 					<Popup>
-						Your approximate location
+							Your approximate location
 					</Popup>
 				</Marker>
+				<ChangeMapView coords={ipLocation} />
 			</MapContainer>
 		</div>
 	)
