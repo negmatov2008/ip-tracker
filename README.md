@@ -1,5 +1,7 @@
 # IP Address Tracker
 
+![Website homepage](https://github.com/Harris-Ryan/IP-tracker/blob/src/assets/ip-tracker-homepage.png?raw=true)
+
 ## Overview
 
 This project is an app that allows users to input an IP Address and have the information of that IP (geolocation, country, timezone, isp, etc...) populate in the app (Via an API endpoint), along with a complementary visial representation of the geolocation using a leaflet map API. See below for more information on the technologies used.
