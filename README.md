@@ -25,6 +25,16 @@ There were a number of roadblocks I encountered along the way. Primarily, these 
 
 This project will continue to be worked on, but this will primarily be through the design (CSS) aspect of the project in order to further optimize the view for different devices and screen sizes as well as clean up the overall layout to have it looking as clean as possible.
 
+### Deployment Instructions
+
+This app uses a GitHub Actions workflow to deploy to GitHub Pages, where it is hosted. The app uses a separate 'gh-pages' git branch with only the projects 'dist/' folder which contains the output of the build. Eventually, this process will be fully automated through GH Actions. It will be triggered automatically on a change to the 'main' branch, just need to find time to implement.
+
+Fow now, the instructions are as follows:
+
+1. Pull/Merge all changes into 'gh-pages' branch so it is most up-to-date
+
+2. Run `pnpm build` on the 'main' branch
+
 ## Author
 
 - Portfolio Website - [Ryan Harris](https://www.eryanharris.com)
