@@ -34,7 +34,7 @@ jobs:
       - name: Build App
         run: pnpm build
 
-      - name: Upload production build files
+      - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
         with:
           name: production-files
