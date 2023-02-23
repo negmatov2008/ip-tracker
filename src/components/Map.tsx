@@ -1,5 +1,7 @@
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
+// import { Icon } from 'leaflet'
+// import MarkerIcon from '../assets/icon-location.svg'
 
 interface Props {
 	ipLocation: [number, number] | any;
@@ -22,7 +24,7 @@ const Map = ({ ipLocation }: Props) => {
 				/>
 				<Marker position={ipLocation}>
 					<Popup>
-							Your approximate location
+						<span>Approximate Location</span>
 					</Popup>
 				</Marker>
 				<ChangeMapView coords={ipLocation} />
