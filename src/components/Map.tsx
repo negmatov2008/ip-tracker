@@ -17,7 +17,7 @@ const ChangeMapView = ({ coords }: any) => {
 const Map = ({ ipLocation }: Props) => {
 	const locationIcon = new Icon({
 		iconUrl: MarkerIcon,
-		iconSize: [25, 33]
+		iconSize: [25, 34]
 	})
 
 	return (
