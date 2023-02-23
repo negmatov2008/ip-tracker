@@ -29,7 +29,7 @@ const Map = ({ ipLocation }: Props) => {
 				/>
 				<Marker position={ipLocation} icon={locationIcon}>
 					<Popup>
-						<span>Approximate Location</span>
+						<span>Approximate IP Location</span>
 					</Popup>
 				</Marker>
 				<ChangeMapView coords={ipLocation} />
