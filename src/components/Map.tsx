@@ -1,7 +1,7 @@
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
-// import { Icon } from 'leaflet'
-// import MarkerIcon from '../assets/icon-location.svg'
+import { Icon } from 'leaflet'
+import MarkerIcon from '../assets/icon-location.svg'
 
 interface Props {
 	ipLocation: [number, number] | any;
@@ -15,6 +15,11 @@ const ChangeMapView = ({ coords }: any) => {
 }
 
 const Map = ({ ipLocation }: Props) => {
+	const locationIcon = new Icon({
+		iconUrl: MarkerIcon,
+		iconSize: [25, 33]
+	})
+
 	return (
 		<div className='pt-20'>
 			<MapContainer center={ipLocation} zoom={10} scrollWheelZoom={true}>
@@ -22,7 +27,7 @@ const Map = ({ ipLocation }: Props) => {
 					attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 				/>
-				<Marker position={ipLocation}>
+				<Marker position={ipLocation} icon={locationIcon}>
 					<Popup>
 						<span>Approximate Location</span>
 					</Popup>
