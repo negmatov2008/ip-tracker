@@ -41,7 +41,7 @@ $ pnpm install
 
 ### CI/CD
 
-This repo uses a simple Github Action workflow to build and deploy the app with Github Pages. This workflow is set to run on every push to the main branch. Once this runs, it will build the project, generate a 'dist' folder, place it on a subtree branch, and that is what Github Pages uses to host the app.
+This repo uses a simple Github Action workflow to build and deploy the app with Github Pages. This workflow is set to run on every push to the main branch. Once this runs, it will build the project, generate a 'dist' folder, place it on a subtree branch (gh-pages), and that is what Github Pages uses to host the app.
 
 ## Author
 
