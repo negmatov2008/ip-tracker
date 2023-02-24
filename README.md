@@ -21,10 +21,6 @@ This was the first project I had worked more seriously with Typescript as well a
 
 There were a number of roadblocks I encountered along the way. Primarily, these issues stemmed from my lack of specific knowledge of the API's I was using to retreive and display the information, but usually, this problem is easily fixed with looking into the API's documentation.
 
-### Continued Development
-
-This project will continue to be worked on, but this will primarily be through the design (CSS) aspect of the project in order to further optimize the view for different devices and screen sizes as well as clean up the overall layout to have it looking as clean as possible.
-
 ### Cloning the Repo
 
 Anyone is welcome to clone this repo and explore how it works, just follow these steps!
