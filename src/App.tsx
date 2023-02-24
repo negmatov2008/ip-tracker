@@ -27,7 +27,7 @@ const App = () => {
 		setIpData({
 			ip: data.ip,
 			isp: data.isp,
-			location: `${data.city}, ${data.state_prov}`,
+			location: `${data.city}, ${data.country_name}`,
 			timezone: data.time_zone.offset,
 			geolocation: [Number(data.latitude), Number(data.longitude)]
 		})
@@ -43,7 +43,7 @@ const App = () => {
 			setIpData({
 				ip: data.ip,
 				isp: data.isp,
-				location: `${data.city}, ${data.state_prov}`,
+				location: `${data.city}, ${data.country_name}`,
 				timezone: data.time_zone.offset,
 				geolocation: [Number(data.latitude), Number(data.longitude)]
 			})

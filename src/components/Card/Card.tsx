@@ -13,7 +13,7 @@ interface Props {
 
 const Card = ({ ipData, loading }: Props) => {
 	return (
-		<div className='font-Rubik absolute top-[260px] left-1/2 z-[500] w-[70vw] flex flex-col -translate-x-1/2 -translate-y-1/2 items-center justify-around divide-solid bg-white text-center rounded-2xl p-2 sm:top-[280px] sm:w-[60vw] md:flex-row md:w-[80vw] md:text-left md:top-[250px]'>
+		<div className='font-Rubik absolute top-[260px] left-1/2 z-[500] w-[70vw] flex flex-col -translate-x-1/2 -translate-y-1/2 items-center justify-around divide-solid bg-white text-center rounded-2xl sm:top-[280px] sm:w-[60vw] md:flex-row md:w-fit md:h-[12vh] md:text-left md:top-[250px]'>
 
 			{loading
 				? (
@@ -60,7 +60,6 @@ const Card = ({ ipData, loading }: Props) => {
 						<CardInfo header={'ISP'} value={ipData.isp} />
 					</>
 				)}
-
 		</div>
 	)
 }
