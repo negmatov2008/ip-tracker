@@ -15,12 +15,6 @@ This project is an app that allows users to input an IP Address and have the inf
 - [LeafletJS](https://leafletjs.com/)[LeafletJS](https://leafletjs.com/): Used to generate the interactive on-screen map
 - [IP Geolocation](https://ipgeolocation.io): Used to request information about a given IP Address
 
-### What I Learned
-
-This was the first project I had worked more seriously with Typescript as well as with multiple API's. My biggest takeaway from this project is how to conceptualize the project's structure and functionality (file structure, page layouts, props to pass, how to balance using two separate API's that can complement eachother) from both the user's standpoint (What looks the best and has excellent functionality), as well as the developer (What is the optimal solution for this problem and how can I integrate it into the code that is already existing?).
-
-There were a number of roadblocks I encountered along the way. Primarily, these issues stemmed from my lack of specific knowledge of the API's I was using to retreive and display the information, but usually, this problem is easily fixed with looking into the API's documentation.
-
 ### Cloning the Repo
 
 Anyone is welcome to clone this repo and explore how it works, just follow these steps!
