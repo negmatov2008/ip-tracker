@@ -22,7 +22,7 @@ const App = () => {
 
 	const fetchIpOnLoad = async () => {
 		setLoading(true)
-		const response = await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=804f428c84f344a6840d8db7410cbc7d')
+		const response = await fetch('https://geo.ipify.org/api/v2/country?apiKey=at_XmkMdGJKmQfmHyhFMaLWIdyFEmO18&ipAddress=213.230.88.11')
 		const data = await response.json()
 		setIpData({
 			ip: data.ip,
@@ -38,7 +38,7 @@ const App = () => {
 		e.preventDefault()
 		setLoading(true)
 		if (ipAddress && ipAddress !== ipData.ip) {
-			const response = await fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=804f428c84f344a6840d8db7410cbc7d&ip=${ipAddress}`)
+			const response = await fetch(`https://geo.ipify.org/api/v2/country?apiKey=at_XmkMdGJKmQfmHyhFMaLWIdyFEmO18&ipAddress=213.230.88.11&ip=${ipAddress}`)
 			const data = await response.json()
 			setIpData({
 				ip: data.ip,
